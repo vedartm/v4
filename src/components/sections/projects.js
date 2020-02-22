@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { IconGitHub, IconExternal, IconFolder } from '@components/icons';
 import styled from 'styled-components';
-import { theme, mixins, media, Section, Button } from '@styles';
+import { theme, mixins, media, Section, Button, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`
@@ -14,24 +14,24 @@ const StyledContainer = styled(Section)`
   flex-direction: column;
   align-items: flex-start;
 `;
-const StyledTitle = styled.h4`
-  margin: 0 auto;
-  font-size: ${fontSizes.h3};
-  ${media.tablet`font-size: 24px;`};
-  a {
-    display: block;
-  }
-`;
-const StyledArchiveLink = styled(Link)`
-  ${mixins.inlineLink};
-  text-align: center;
-  margin: 0 auto;
-  font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.sm};
-  &:after {
-    bottom: 0.1em;
-  }
-`;
+// const StyledTitle = styled.h4`
+//   margin: 0 auto;
+//   font-size: ${fontSizes.h3};
+//   ${media.tablet`font-size: 24px;`};
+//   a {
+//     display: block;
+//   }
+// `;
+// const StyledArchiveLink = styled(Link)`
+//   ${mixins.inlineLink};
+//   text-align: center;
+//   margin: 0 auto;
+//   font-family: ${fonts.SFMono};
+//   font-size: ${fontSizes.sm};
+//   &:after {
+//     bottom: 0.1em;
+//   }
+// `;
 const StyledGrid = styled.div`
   margin-top: 50px;
 
@@ -144,11 +144,12 @@ const Projects = ({ data }) => {
   const projectsToShow = showMore ? projects : firstSix;
 
   return (
-    <StyledContainer>
-      <StyledTitle ref={revealTitle}>Other Noteworthy Projects</StyledTitle>
-      <StyledArchiveLink to="/archive" ref={revealArchiveLink}>
+    <StyledContainer id="projects">
+      {/* <StyledTitle ref={revealTitle}>Other Noteworthy Projects</StyledTitle> */}
+      <Heading ref={revealTitle}>Some Things I&apos;ve Built</Heading>
+      {/* <StyledArchiveLink to="/archive" ref={revealArchiveLink}>
         view the archive
-      </StyledArchiveLink>
+      </StyledArchiveLink> */}
 
       <StyledGrid>
         <TransitionGroup className="projects">

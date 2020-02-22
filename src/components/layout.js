@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Head, Loader, Nav, Social, Email, Footer } from '@components';
+import { Head, Nav, Social, Email, Footer } from '@components';
 import styled from 'styled-components';
 import { GlobalStyle, theme } from '@styles';
 const { colors, fontSizes, fonts } = theme;
@@ -52,10 +52,10 @@ const StyledContent = styled.div`
 
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
-  const [isLoading, setIsLoading] = useState(isHome);
+  // const [isLoading, setIsLoading] = useState(isHome);
 
   useEffect(() => {
-    if (isLoading || isHome) {
+    if (isHome) {
       return;
     }
     if (location.hash) {
@@ -67,7 +67,7 @@ const Layout = ({ children, location }) => {
         }
       }, 0);
     }
-  }, [isLoading]);
+  });
 
   return (
     <StaticQuery
@@ -89,8 +89,18 @@ const Layout = ({ children, location }) => {
           <GlobalStyle />
 
           <SkipToContent href="#content">Skip to Content</SkipToContent>
+          <StyledContent>
+            <Nav isHome={isHome} />
+            <Social isHome={isHome} />
+            <Email isHome={isHome} />
 
-          {isLoading && isHome ? (
+            <div id="content">
+              {children}
+              <Footer />
+            </div>
+          </StyledContent>
+
+          {/* {isLoading && isHome ? (
             <Loader finishLoading={() => setIsLoading(false)} />
           ) : (
             <StyledContent>
@@ -103,7 +113,7 @@ const Layout = ({ children, location }) => {
                 <Footer />
               </div>
             </StyledContent>
-          )}
+          )} */}
         </div>
       )}
     />
