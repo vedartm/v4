@@ -124,7 +124,7 @@ const Footer = () => {
       </StyledSocial>
       <StyledMetadata tabindex="-1">
         <StyledGitHubLink
-          href="https://brittanychiang.com"
+          href="https://www.github.com/excogitatr/v4"
           target="_blank"
           rel="nofollow noopener noreferrer">
           <div>Redesigned by excogitatr forked from BC</div>
