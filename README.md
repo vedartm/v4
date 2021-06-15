@@ -2,10 +2,10 @@
   <img alt="Logo" src="https://raw.githubusercontent.com/excogitatr/v4/master/src/images/logo_color.png" width="100" />
 </div>
 <h1 align="center">
-meus.cogitare.space
+vedartm.com
 </h1>
 <p align="center">
-  The portfolio website <a href="https://meus.cogitare.space" target="_blank">meus.cogitare.space</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+  The portfolio website <a href="https://vedartm.com" target="_blank">vedartm.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 <p align="center">
   <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">

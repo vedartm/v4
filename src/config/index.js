@@ -4,13 +4,13 @@ module.exports = {
     'Venkatesh Prasad is a software engineer based in Boston, MA who specializes in developing (and occasionally designing) exceptional, high-quality websites and applications.',
   siteKeywords:
     'Venkatesh Prasad, Venkatesh, Prasad, excogitatr, software engineer, front-end engineer, flutter developer, dart, developer',
-  siteUrl: 'https://meus.cogitare.space',
+  siteUrl: 'https://vedartm.com',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-45666519-2',
   googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
   name: 'Venkatesh Prasad V M',
   location: 'Bengaluru, KA',
-  email: 'venkatesh@cogitare.space',
+  email: 'venkatesh@vedartm.com',
   github: 'https://github.com/excogitatr',
   twitterHandle: '@excogitatr',
   socialMedia: [

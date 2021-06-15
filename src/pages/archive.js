@@ -100,7 +100,7 @@ const ArchivePage = ({ location, data }) => {
     <Layout location={location}>
       <Helmet>
         <title>Archive | Venkatesh Prasad</title>
-        <link rel="canonical" href="https://meus.cogitare.space/archive" />
+        <link rel="canonical" href="https://vedartm.com/archive" />
       </Helmet>
 
       <StyledMainContainer>
