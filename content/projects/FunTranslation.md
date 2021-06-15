@@ -1,7 +1,7 @@
 ---
 date: '2019-06-21'
 title: 'Fun Translation App'
-github: 'https://github.com/excogitatr/fun_translation_flutter'
+github: 'https://github.com/vedartm/fun_translation_flutter'
 external: ''
 tech:
   - Flutter

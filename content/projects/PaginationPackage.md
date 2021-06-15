@@ -1,7 +1,7 @@
 ---
 date: '2018-05-01'
 title: 'Pagination Package'
-github: 'https://github.com/excogitatr/pagination_view'
+github: 'https://github.com/vedartm/pagination_view'
 external: 'https://pub.dev/packages/pagination_view'
 tech:
   - Flutter Package

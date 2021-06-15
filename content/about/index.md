@@ -3,15 +3,17 @@ title: 'About Me'
 avatar: './me.jpg'
 skills:
   - Flutter (Android, iOS)
+  - Golang
+  - Node.js, Express
   - GraphQL, REST
   - AWS, Hasura, Firebase
-  - Node.js
-  - Express
-  - VS code, IntelliJ
+  - VS code, Vim
 ---
 
-Hello! I'm Venkatesh, a software engineer based in Bengaluru, who enjoys building things that live on the internet. I develop exceptional mobile applications that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.
+Hello World! I'm Venkatesh Prasad, an entrepreneur by day and an open-source contributor by night.
 
-Shortly after graduating from [Sastra University](https://www.sastra.edu/), I became the Co-founder of [EventBeep](https://eventbeep.com/) where I work on a wide variety of interesting and meaningful products on a daily basis.
+As a young entrepreneur, I love solving problems on a global scale using technology. I am always looking for a chance to obtain creative and challenging problem that allows me to learn while lending my contribution using my technical, innovative and logical skills.
+
+Other than building products, I love to play guitar, pencil sketch, and play tennis.
 
 Here are a few technologies I've been working with recently:

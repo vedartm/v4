@@ -85,10 +85,10 @@ const Footer = () => (
     </StyledSocial>
     <StyledMetadata tabindex="-1">
       <StyledGitHubLink
-        href="https://www.github.com/excogitatr/v4"
+        href="https://www.github.com/vedartm/v4"
         target="_blank"
         rel="nofollow noopener noreferrer">
-        <div>Redesigned by excogitatr forked from BC</div>
+        <div>Redesigned by vedartm forked from BC</div>
       </StyledGitHubLink>
     </StyledMetadata>
   </StyledContainer>

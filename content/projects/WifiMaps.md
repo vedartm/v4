@@ -1,7 +1,7 @@
 ---
 date: '2017-11-01'
 title: 'WiFi Maps'
-github: 'https://github.com/excogitatr/WiFiMaps'
+github: 'https://github.com/vedartm/WiFiMaps'
 external: ''
 tech:
   - Android

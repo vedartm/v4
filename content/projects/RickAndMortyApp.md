@@ -1,7 +1,7 @@
 ---
 date: '2019-11-12'
 title: 'Building Flutter app with GraphQL API'
-github: 'https://github.com/excogitatr/rick-and-morty-info'
+github: 'https://github.com/vedartm/rick-and-morty-info'
 external: ''
 tech:
   - Flutter

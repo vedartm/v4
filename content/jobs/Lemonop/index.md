@@ -1,6 +1,6 @@
 ---
 date: '2016-12-21'
-title: 'Software Developer Intern'
+title: 'Software Developer'
 company: 'Lemonop'
 location: 'Bengaluru, KA'
 range: 'Nov - Dec 2017'

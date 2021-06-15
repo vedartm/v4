@@ -2,10 +2,10 @@
   "name": "v4",
   "description": "Personal Website V4",
   "version": "1.0.0",
-  "author": "Brittany Chiang <brittany.chiang@gmail.com>",
+  "author": "Venkatesh Prasad <venkatesprasadvm@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/excogitatr/v4"
+    "url": "https://github.com/vedartm/v4"
   },
   "keywords": [
     "gatsby"

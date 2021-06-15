@@ -1,7 +1,7 @@
 ---
 date: '2017-03-01'
 title: 'Diet Janitor'
-github: 'https://github.com/excogitatr/Diet-Janitor'
+github: 'https://github.com/vedartm/Diet-Janitor'
 external: ''
 tech:
   - Android

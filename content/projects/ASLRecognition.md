@@ -1,7 +1,7 @@
 ---
 date: '2017-12-01'
 title: 'ASL Recognition'
-github: 'https://github.com/excogitatr/ASL-Recognition'
+github: 'https://github.com/vedartm/ASL-Recognition'
 external: ''
 tech:
   - Python

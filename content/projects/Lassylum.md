@@ -1,7 +1,7 @@
 ---
 date: '2018-08-01'
 title: 'Lassylum'
-github: 'https://github.com/excogitatr/Lassylum'
+github: 'https://github.com/vedartm/Lassylum'
 external: ''
 tech:
   - Android

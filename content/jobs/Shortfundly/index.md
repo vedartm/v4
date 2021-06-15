@@ -1,6 +1,6 @@
 ---
 date: '2015-12-21'
-title: 'Android Intern'
+title: 'Android Developer'
 company: 'Shortfundly'
 location: 'Remote'
 range: 'Apr - Jul 2017'

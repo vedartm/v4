@@ -11,28 +11,28 @@ module.exports = {
   name: 'Venkatesh Prasad V M',
   location: 'Bengaluru, KA',
   email: 'venkatesh@vedartm.com',
-  github: 'https://github.com/excogitatr',
-  twitterHandle: '@excogitatr',
+  github: 'https://github.com/vedartm',
+  twitterHandle: '@vedart_m',
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/excogitatr',
+      url: 'https://github.com/vedartm',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/excogitatr',
+      url: 'https://www.linkedin.com/in/vedart',
     },
     // {
     //   name: 'Codepen',
     //   url: 'https://codepen.io/bchiang7',
     // },
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/excogitatr',
-    },
+    // {
+    //   name: 'Instagram',
+    //   url: 'https://www.instagram.com/excogitatr',
+    // },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/excogitatr',
+      url: 'https://twitter.com/vedart_m',
     },
   ],
 
