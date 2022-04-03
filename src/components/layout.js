@@ -1,49 +1,9 @@
-import React, { useEffect } from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Head, Nav, Social, Email, Footer } from '@components';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { Head, Loader, Nav, Social, Email, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
-const { colors, fontSizes, fonts } = theme;
 
-// https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
-if (typeof window !== 'undefined') {
-  // eslint-disable-next-line global-require
-  require('smooth-scroll')('a[href*="#"]');
-}
-
-const SkipToContent = styled.a`
-  position: absolute;
-  top: auto;
-  left: -999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  z-index: -99;
-  &:hover {
-    background-color: ${colors.darkGrey};
-  }
-  &:focus,
-  &:active {
-    outline: 0;
-    color: ${colors.green};
-    background-color: ${colors.lightNavy};
-    border-radius: ${theme.borderRadius};
-    padding: 18px 23px;
-    font-size: ${fontSizes.sm};
-    font-family: ${fonts.SFMono};
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    transition: ${theme.transition};
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    overflow: auto;
-    z-index: 99;
-  }
-`;
 const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -52,55 +12,53 @@ const StyledContent = styled.div`
 
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
-  // const [isLoading, setIsLoading] = useState(isHome);
+  const [isLoading, setIsLoading] = useState(isHome);
+
+  // Sets target="_blank" rel="noopener noreferrer" on external links
+  const handleExternalLinks = () => {
+    const allLinks = Array.from(document.querySelectorAll('a'));
+    if (allLinks.length > 0) {
+      allLinks.forEach(link => {
+        if (link.host !== window.location.host) {
+          link.setAttribute('rel', 'noopener noreferrer');
+          link.setAttribute('target', '_blank');
+        }
+      });
+    }
+  };
 
   useEffect(() => {
-    if (isHome) {
+    if (isLoading) {
       return;
     }
+
     if (location.hash) {
       const id = location.hash.substring(1); // location.hash without the '#'
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) {
           el.scrollIntoView();
+          el.focus();
         }
       }, 0);
     }
-  });
+
+    handleExternalLinks();
+  }, [isLoading]);
 
   return (
-    <StaticQuery
-      query={graphql`
-        query LayoutQuery {
-          site {
-            siteMetadata {
-              title
-              siteUrl
-              description
-            }
-          }
-        }
-      `}
-      render={({ site }) => (
-        <div id="root">
-          <Head metadata={site.siteMetadata} />
+    <>
+      <Head />
 
+      <div id="root">
+        <ThemeProvider theme={theme}>
           <GlobalStyle />
 
-          <SkipToContent href="#content">Skip to Content</SkipToContent>
-          <StyledContent>
-            <Nav isHome={isHome} />
-            <Social isHome={isHome} />
-            <Email isHome={isHome} />
+          <a className="skip-to-content" href="#content">
+            Skip to Content
+          </a>
 
-            <div id="content">
-              {children}
-              <Footer />
-            </div>
-          </StyledContent>
-
-          {/* {isLoading && isHome ? (
+          {isLoading && isHome ? (
             <Loader finishLoading={() => setIsLoading(false)} />
           ) : (
             <StyledContent>
@@ -113,10 +71,10 @@ const Layout = ({ children, location }) => {
                 <Footer />
               </div>
             </StyledContent>
-          )} */}
-        </div>
-      )}
-    />
+          )}
+        </ThemeProvider>
+      </div>
+    </>
   );
 };
 
