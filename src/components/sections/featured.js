@@ -321,6 +321,8 @@ const Featured = () => {
               }
               tech
               github
+              android
+              ios
               external
               cta
             }
@@ -355,7 +357,7 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, cta } = frontmatter;
+            const { external, title, tech, github, android, ios, cover, cta } = frontmatter;
             const image = getImage(cover);
 
             return (
@@ -392,6 +394,16 @@ const Featured = () => {
                           <Icon name="GitHub" />
                         </a>
                       )}
+                      {ios && (
+                        <a href={ios} aria-label="Apple App Store Link">
+                          <Icon name="AppStore" />
+                        </a>
+                      )}
+                      {android && (
+                        <a href={android} aria-label="Google Play Store Link">
+                          <Icon name="PlayStore" />
+                        </a>
+                      )}
                       {external && !cta && (
                         <a href={external} aria-label="External Link" className="external">
                           <Icon name="External" />
@@ -402,7 +414,10 @@ const Featured = () => {
                 </div>
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
+                  <a
+                    href={
+                      external ? external : github ? github : ios ? ios : android ? android : '#'
+                    }>
                     <GatsbyImage image={image} alt={title} className="img" />
                   </a>
                 </div>

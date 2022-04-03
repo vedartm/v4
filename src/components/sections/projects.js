@@ -180,6 +180,8 @@ const Projects = () => {
               title
               tech
               github
+              android
+              ios
               external
             }
             html
@@ -212,7 +214,7 @@ const Projects = () => {
 
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { github, external, ios, android, title, tech } = frontmatter;
 
     return (
       <div className="project-inner">
@@ -235,6 +237,16 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer">
                   <Icon name="External" />
+                </a>
+              )}
+              {ios && (
+                <a href={ios} aria-label="Apple App Store Link">
+                  <Icon name="AppStore" />
+                </a>
+              )}
+              {android && (
+                <a href={android} aria-label="Google Play Store Link">
+                  <Icon name="PlayStore" />
                 </a>
               )}
             </div>
